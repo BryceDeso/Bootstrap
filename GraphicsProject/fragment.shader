@@ -39,4 +39,11 @@ void main() {
 	vec3 specularColor = (fColor.xyz + kSpecular) * iSpecular * specularTerm;
 
 	pColor = vec4(ambientColor + diffuseColor + specularColor, 1.0f);
+
+	//Snow
+	//if (kNormal.y > 0.5f)
+	//{
+	//	vec4 red = vec4(0.0f, 0.0f, 0.0f, 1.0f);
+	//	pColor = red;
+	//}
 }

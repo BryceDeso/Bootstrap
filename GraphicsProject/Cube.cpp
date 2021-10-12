@@ -26,5 +26,7 @@ void Cube::setVertexPosition(Vertex* vertices, int vertexCount, int index, glm::
 	for (int i = index; i < vertexCount; i += 8)
 	{
 		vertices[i].position = glm::vec4(position, 1.0f);
+		vertices[i].normal = glm::vec4(position, 0.0f);
+		vertices[i].color = m_color;
 	}
 }
