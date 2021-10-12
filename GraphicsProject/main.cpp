@@ -1,10 +1,10 @@
 #include "Engine.h"
-#include "TestWorld.h"
+#include "RabbitWorld.h"
 
 int main() {
-	Engine* engine = new Engine(1280, 720, "Graphics");
+	Engine* engine = new Engine(1280, 720, "Rabbit World");
 
-	TestWorld* world = new TestWorld();
+	RabbitWorld* world = new RabbitWorld();
 
 	engine->setActiveWorld(world);
 
