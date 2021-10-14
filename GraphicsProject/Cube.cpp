@@ -3,30 +3,58 @@
 Cube::Vertex* Cube::generateVertices(unsigned int& vertexCount, unsigned int& triCount)
 {
 	Vertex* vertices = nullptr;
-	vertexCount = 36;
 	triCount = 12;
+	vertexCount = 36;
 
 	vertices = new Vertex[vertexCount];
 
+	initializeCorner(vertices, vertexCount, 0, { 1.0f,  1.0f, 1.0f }); //A
+	initializeCorner(vertices, vertexCount, 1, { 1.0f,  1.0f, -1.0f }); //B
+	initializeCorner(vertices, vertexCount, 2, { 1.0f, -1.0f, 1.0f }); //C
+	initializeCorner(vertices, vertexCount, 3, { 1.0f, -1.0f,  -1.0f }); //D
+	initializeCorner(vertices, vertexCount, 4, { -1.0f, -1.0f, 1.0f }); //E
+	initializeCorner(vertices, vertexCount, 5, { -1.0f, -1.0f, -1.0f }); //F
+	initializeCorner(vertices, vertexCount, 6, { -1.0f, 1.0f, 1.0f }); //G
+	initializeCorner(vertices, vertexCount, 7, { -1.0f, 1.0f,  -1.0f }); //H
 
-	setVertexPosition(vertices, vertexCount, 0, { -0.5,  0.5, -0.5 });	//A
-	setVertexPosition(vertices, vertexCount, 0, {  0.5,  0.5,  0.5 });	//B
-	setVertexPosition(vertices, vertexCount, 0, {  0.5, -0.5, -0.5 });	//C
-	setVertexPosition(vertices, vertexCount, 0, { -0.5, -0.5,  0.5 });	//D
-	setVertexPosition(vertices, vertexCount, 0, {  0.5,  0.5, -0.5 });	//E
-	setVertexPosition(vertices, vertexCount, 0, { -0.5,  0.5,  0.5 });	//F
-	setVertexPosition(vertices, vertexCount, 0, { -0.5, -0.5, -0.5 });	//G
-	setVertexPosition(vertices, vertexCount, 0, {  0.5, -0.5,  0.5 });	//H
+	vertices[0].color = { 0.0f, 1.0f, 0.0f, 1.0f };
+	vertices[1].color = { 0.0f, 1.0f, 0.0f, 1.0f };
+	vertices[2].color = { 0.0f, 1.0f, 0.0f, 1.0f };
+	vertices[3].color = { 0.0f, 1.0f, 0.0f, 1.0f };
+	vertices[4].color = { 0.0f, 1.0f, 0.0f, 1.0f };
+	vertices[5].color = { 0.0f, 1.0f, 0.0f, 1.0f };
+	vertices[6].color = { 0.0f, 1.0f, 0.0f, 1.0f };
+	vertices[7].color = { 0.0f, 1.0f, 0.0f, 1.0f };
+
+
+	//initializeCorner(vertices, vertexCount, 0, { 1.0f,  1.0f, 1.0f }); //A
+	//initializeCorner(vertices, vertexCount, 1, { 1.0f,  1.0f, -1.0f }); //B
+	//initializeCorner(vertices, vertexCount, 2, { 1.0f, -1.0f, 1.0f }); //C
+	//initializeCorner(vertices, vertexCount, 3, { 1.0f, -1.0f,  -1.0f }); //D
+	//initializeCorner(vertices, vertexCount, 4, { -1.0f, -1.0f, 1.0f }); //E
+	//initializeCorner(vertices, vertexCount, 5, { -1.0f, -1.0f, -1.0f }); //F
+	//initializeCorner(vertices, vertexCount, 6, { -1.0f, 1.0f, 1.0f }); //G
+	//initializeCorner(vertices, vertexCount, 7, { -1.0f, 1.0f,  -1.0f }); //H
+
+	/*
+	+ + + 
+	+ - +
+	+ + -
+	+ - -
+
+	- - -
+	- + -
+	- - +
+	- + +
+	*/
 
 	return vertices;
 }
 
-void Cube::setVertexPosition(Vertex* vertices, int vertexCount, int index, glm::vec3 position)
-{
-	for (int i = index; i < vertexCount; i += 8)
-	{
-		vertices[i].position = glm::vec4(position, 1.0f);
-		vertices[i].normal = glm::vec4(position, 0.0f);
+void Cube::initializeCorner(Vertex* vertices, int vertexCount, int index, glm::vec3 coordinates) {
+	for (int i = index; i < vertexCount; i += 8) {
+		vertices[i].position = glm::vec4(coordinates * 0.5f, 1.0f);
+		vertices[i].normal = glm::vec4(coordinates, 0.0f);
 		vertices[i].color = m_color;
 	}
 }
