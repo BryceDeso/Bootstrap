@@ -1,12 +1,13 @@
 #include "Light.h"
 #include "gl_core_4_4.h"
 
-Light::Light(glm::vec3 direction, glm::vec4 ambient, glm::vec4 diffuse, glm::vec4 specular)
+Light::Light(glm::vec3 direction, glm::vec4 ambient, glm::vec4 diffuse, glm::vec4 specular, int shaderIndex)
 {
 	setDirection(direction);
 	m_ambient = ambient;
 	m_diffuse = diffuse;
 	m_specular = specular;
+	m_useShader = shaderIndex;
 }
 
 void Light::onDraw()
@@ -19,10 +20,26 @@ void Light::onDraw()
 		return;
 	}
 
-	int lightDirection = glGetUniformLocation(program, "iDirection");
-	int lightAmbient = glGetUniformLocation(program, "iAmbient");
-	int lightDiffuse = glGetUniformLocation(program, "iDiffuse");
-	int lightSpecular = glGetUniformLocation(program, "iSpecular");
+	int lightDirection = glGetUniformLocation(program, "iDirectionTwo");
+	int lightAmbient = glGetUniformLocation(program, "iAmbientTwo");
+	int lightDiffuse = glGetUniformLocation(program, "iDiffuseTwo");
+	int lightSpecular = glGetUniformLocation(program, "iSpecularTwo");
+
+	//if (m_useShader == 1)
+	//{
+	//	lightDirection = glGetUniformLocation(program, "iDirection");
+	//	lightAmbient = glGetUniformLocation(program, "iAmbient");
+	//	lightDiffuse = glGetUniformLocation(program, "iDiffuse");
+	//	lightSpecular = glGetUniformLocation(program, "iSpecular");
+	//}
+	//else if (m_useShader == 2)
+	//{
+	//	lightDirection = glGetUniformLocation(program, "iDirectionTwo");
+	//	lightAmbient = glGetUniformLocation(program, "iAmbientTwo");
+	//	lightDiffuse = glGetUniformLocation(program, "iDiffuseTwo");
+	//	lightSpecular = glGetUniformLocation(program, "iSpecularTwo");
+	//}
+	
 
 	if (lightDirection >= 0) {
 		glm::vec3 direction = getDirection();

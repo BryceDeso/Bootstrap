@@ -35,4 +35,3 @@ private:
 
 	World* m_activeWorld = nullptr;
 };
-

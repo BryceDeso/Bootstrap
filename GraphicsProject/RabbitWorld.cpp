@@ -14,12 +14,23 @@ void RabbitWorld::onStart()
 		{ 1.0f, 1.0f, 1.0f },
 		{ 0.5f, 0.5f, 0.5f, 1.0f },
 		{ 1.0f, 1.0f, 1.0f, 1.0f },
-		{ 1.0f, 1.0f, 1.0f, 1.0f }
+		{ 0.0f, 0.0f, 0.0f, 1.0f },
+		1
 	);
-	m_light->setDirection({ -40.0f, -100.0f, 0.0f });
+	m_light->setDirection({ -40.0f, -100.0f, 0.0f});
 	add(m_light);
 
-	//Dragon
+	m_light2 = new Light(
+		{ 1.0f, 1.0f, 1.0f },
+		{ 0.0f, 0.0f, 0.0f, 1.0f },
+		{ 0.0f, 0.0f, 0.0f, 1.0f },
+		{ 1.0f, 1.0f, 1.0f, 1.0f },
+		2
+	);
+	m_light2->setDirection({ 40.0f, -100.0f, 0.0f});
+	add(m_light2);
+
+	//Rabbit
 	m_rabbit = new OBJMesh();
 	m_rabbit->load("Bunny.obj");
 	m_rabbit->getTransform()->setPosition({ 5.0f, 0.0f, 0.0f });
@@ -36,6 +47,7 @@ void RabbitWorld::onEnd()
 {
 	destroy(m_camera);
 	destroy(m_light);
+	destroy(m_light2);
 	destroy(m_rabbit);
 	destroy(m_cube);
 }
