@@ -27,7 +27,7 @@ void RabbitWorld::onStart()
 		{ 1.0f, 1.0f, 1.0f, 1.0f },
 		2
 	);
-	m_light2->setDirection({ 40.0f, -100.0f, 0.0f});
+	m_light2->setDirection({ -40.0f, -100.0f, 0.0f});
 	add(m_light2);
 
 	//Rabbit
