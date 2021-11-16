@@ -17,8 +17,6 @@ Quad::Vertex* Quad::generateVertices(unsigned int& vertexCount, unsigned int& tr
 	vertices[1].position = { 0.5f, 0.0f, 0.5f, 1.0f };
 	vertices[2].position = { -0.5f, 0.0f, -0.5f, 1.0f };
 	vertices[3].position = { 0.5f, 0.0f, -0.5f, 1.0f };
-	//vertices[4].position = { 0.5f, 0.0f, 0.5f, 1.0f };
-	//vertices[5].position = { -0.5f, 0.0f, -0.5f, 1.0f };
 
 	vertices[0].texCoord = { 0.0f,0.0f };
 	vertices[1].texCoord = { 0.0f,1.0f };
@@ -41,7 +39,7 @@ unsigned int* Quad::generateIndices(unsigned int& indexCount)
 
 	unsigned int* indices = new unsigned int[indexCount] {
 		0, 1, 2,
-			2, 1, 3
+		2, 1, 3
 	};
 
 	return indices;

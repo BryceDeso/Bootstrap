@@ -12,14 +12,14 @@ void World::update(float deltaTime)
 		start();
 	}
 
-	onUpdate(deltaTime);
-
 	//Update the list of entities
 	for (Entity* entity : addList) {
 		entities.push_back(entity);
 	}
+
 	addList.clear();
 	entities.unique();
+
 	for (Entity* entity : removeList) {
 		entities.remove(entity);
 	}

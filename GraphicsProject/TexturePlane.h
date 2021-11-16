@@ -1,6 +1,7 @@
 #pragma once
 #include "Quad.h"
 #include "Texture.h"
+
 class TexturePlane : public Quad
 {
 public:

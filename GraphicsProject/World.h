@@ -16,7 +16,6 @@ public:
 	void end();
 
 	virtual void onStart() {}
-	virtual void onUpdate(float deltaTime) {}
 	virtual void onDraw() {}
 	virtual void onEnd() {}
 

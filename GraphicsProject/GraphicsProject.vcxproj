@@ -209,6 +209,14 @@
       <FileType>Document</FileType>
     </CopyFileToFolders>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_cloud.jpg" />
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_cloud_trans.jpg" />
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_diffuse.jpg" />
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_lights.jpg" />
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_normal.jpg" />
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_specular.jpg" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

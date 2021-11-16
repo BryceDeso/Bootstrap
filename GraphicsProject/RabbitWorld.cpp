@@ -13,25 +13,25 @@ void RabbitWorld :: onStart()
 	//light
 	m_light = new Light(
 		0,
-		{ 0.4f, 0.3f, 0.6f },
-		{ 0.5f, 0.3f, 0.7f, 0.5f },
-		{ 0.2f, 0.6f, 0.4, 0.5f },
-		{ 0.0f, 0.0f, 0.0f, 0.0f }
+		{ 1.0f, 0.0f, 1.0f },
+		{ 0.5f, 0.2f, 0.5f, 1.0f },
+		{ 0.2f, 0.2f, 0.7f, 1.0f },
+		{ 0.2f, 1.0f, 0.5f, 1.0f }
 	);
-	m_light->setDirection({ -1.0f, -0.5f, -0.5f });
+	m_light->setDirection({ -1.0f, -0.5f, -1.0f });
 	add(m_light);
 
 	m_light2 = new Light(
 		1,
-		{ 0.2f, 0.6f, 0.3f },
-		{ 0.0f, 0.0f, 0.0f, 0.0f },
-		{ 0.0f, 0.0f, 0.0f, 0.0f },
-		{ 0.6f, 0.6f, 0.6f, 1.0f }
+		{ 0.2f, 0.4f, 0.1f },
+		{ 0.7f, 0.2f, 0.4f, 1.0f },
+		{ 0.9f, 0.2f, 0.2f, 1.0f },
+		{ 0.2f, 0.7f, 0.1f, 1.0f }
 	);
-	m_light2->setDirection({ -1.0f, -0.6f, -0.3f });
+	m_light2->setDirection({ 1.0f, 0.5f, 1.0f });
 	add(m_light2);
 
-	//dragon
+	//Rabbit
 	m_rabbit = new OBJMesh();
 	m_rabbit->load("Bunny.obj");
 	m_rabbit->getTransform()->setPosition({ 5.0f, 0.0f, 0.0f });
@@ -43,8 +43,8 @@ void RabbitWorld :: onStart()
 	m_cube->getTransform()->setPosition({ 3.0f, 0.0f, 0.0f });
 	add(m_cube);
 
-	m_map = new TexturePlane("earth_diffuse.jpg", { 0.25f, 0.25f, 0.25f, 1.0f });
-	add(m_map);
+	m_plane = new TexturePlane("earth_diffuse.jpg", { 0.5f, 0.5f, 0.5f, 1.0f });
+	/*add(m_plane);*/
 
 }
 

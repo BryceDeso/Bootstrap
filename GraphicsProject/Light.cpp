@@ -1,6 +1,7 @@
 #include "Light.h"
 #include "gl_core_4_4.h"
 #include <string>
+
 Light::Light(int term, glm::vec3 direction, glm::vec4 ambient, glm::vec4 diffuse, glm::vec4 specular)
 {
 	m_term = term;

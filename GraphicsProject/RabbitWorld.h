@@ -18,5 +18,5 @@ private:
 	Light* m_light2 = nullptr;
 	OBJMesh* m_rabbit = nullptr;
 	Cube* m_cube = nullptr;
-	TexturePlane* m_map = nullptr;
+	TexturePlane* m_plane = nullptr;
 };

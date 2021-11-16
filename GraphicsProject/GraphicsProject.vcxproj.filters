@@ -139,9 +139,37 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="Buddha.obj" />
-    <CopyFileToFolders Include="Bunny.obj" />
-    <CopyFileToFolders Include="Dragon.obj" />
-    <CopyFileToFolders Include="Lucy.obj" />
+    <CopyFileToFolders Include="Bunny.obj">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Buddha.obj">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Dragon.obj">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Lucy.obj">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_specular.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_cloud.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_cloud_trans.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_diffuse.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_lights.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Downloads\Earth Textures (1)\earth_normal.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

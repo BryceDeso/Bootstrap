@@ -8,7 +8,8 @@
 #include <glm/mat4x4.hpp>
 #include <memory>
 
-namespace aie {
+namespace aie 
+{
 
 	// simplified render pipeline shader stages
 	enum eShaderStage : unsigned int {
@@ -115,5 +116,4 @@ namespace aie {
 
 		char* m_lastError;
 	};
-
 }
