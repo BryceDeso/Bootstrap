@@ -12,21 +12,21 @@ void RabbitWorld :: onStart()
 
 	//light
 	m_light = new Light(
-		0,
 		{ 1.0f, 0.0f, 1.0f },
 		{ 0.5f, 0.2f, 0.5f, 1.0f },
 		{ 0.2f, 0.2f, 0.7f, 1.0f },
-		{ 0.2f, 1.0f, 0.5f, 1.0f }
+		{ 0.2f, 1.0f, 0.5f, 1.0f },
+		0
 	);
 	m_light->setDirection({ -1.0f, -0.5f, -1.0f });
 	add(m_light);
 
 	m_light2 = new Light(
-		1,
 		{ 0.2f, 0.4f, 0.1f },
 		{ 0.7f, 0.2f, 0.4f, 1.0f },
 		{ 0.9f, 0.2f, 0.2f, 1.0f },
-		{ 0.2f, 0.7f, 0.1f, 1.0f }
+		{ 0.2f, 0.7f, 0.1f, 1.0f },
+		1
 	);
 	m_light2->setDirection({ 1.0f, 0.5f, 1.0f });
 	add(m_light2);
@@ -44,7 +44,7 @@ void RabbitWorld :: onStart()
 	add(m_cube);
 
 	m_plane = new TexturePlane("earth_diffuse.jpg", { 0.5f, 0.5f, 0.5f, 1.0f });
-	/*add(m_plane);*/
+	add(m_plane);
 
 }
 

@@ -2,13 +2,13 @@
 #include "gl_core_4_4.h"
 #include <string>
 
-Light::Light(int term, glm::vec3 direction, glm::vec4 ambient, glm::vec4 diffuse, glm::vec4 specular)
+Light::Light(glm::vec3 direction, glm::vec4 ambient, glm::vec4 diffuse, glm::vec4 specular, int lightType)
 {
-	m_term = term;
 	setDirection(direction);
 	m_ambient = ambient;
 	m_diffuse = diffuse;
 	m_specular = specular;
+	m_lightType = lightType;
 }
 
 void Light::onDraw()
@@ -21,14 +21,33 @@ void Light::onDraw()
 		return;
 	}
 
-	std::string bound = ("iDirection" + std::to_string(m_term));
-	int lightDirection = glGetUniformLocation(program, bound.c_str());
-	bound = ("iAmbient" + std::to_string(m_term));
-	int lightAmbient = glGetUniformLocation(program, bound.c_str());
-	bound = ("iDiffuse" + std::to_string(m_term));
-	int lightDiffuse = glGetUniformLocation(program, bound.c_str());
-	bound = ("iSpecular" + std::to_string(m_term));
-	int lightSpecular = glGetUniformLocation(program, bound.c_str());
+	int lightDirection;
+	int lightAmbient;
+	int lightDiffuse;
+	int lightSpecular;
+
+	if (m_lightType == 0)
+	{
+		std::string bound = ("iDirection");
+		lightDirection = glGetUniformLocation(program, bound.c_str());
+		bound = ("iAmbient");
+		lightAmbient = glGetUniformLocation(program, bound.c_str());
+		bound = ("iDiffuse");
+		lightDiffuse = glGetUniformLocation(program, bound.c_str());
+		bound = ("iSpecular");
+		lightSpecular = glGetUniformLocation(program, bound.c_str());
+	}
+	else if (m_lightType == 1)
+	{
+		std::string bound = ("iDirection2");
+		lightDirection = glGetUniformLocation(program, bound.c_str());
+		bound = ("iAmbient2");
+		lightAmbient = glGetUniformLocation(program, bound.c_str());
+		bound = ("iDiffuse2");
+		lightDiffuse = glGetUniformLocation(program, bound.c_str());
+		bound = ("iSpecular2");
+		lightSpecular = glGetUniformLocation(program, bound.c_str());
+	}
 
 	if (lightDirection >= 0) {
 		glm::vec3 direction = getDirection();
