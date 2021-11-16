@@ -164,6 +164,7 @@
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Quad.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="TexturePlane.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
@@ -181,6 +182,7 @@
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Quad.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="TexturePlane.h" />
     <ClInclude Include="tiny_obj_loader.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="World.h" />

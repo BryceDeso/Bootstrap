@@ -2,9 +2,9 @@
 #include "World.h"
 #include "PlayerCamera.h"
 #include "Light.h"
-#include "OBJMesh.h"
 #include "Cube.h"
-#include "Quad.h"
+#include "TexturePlane.h"
+#include "OBJMesh.h"
 
 class RabbitWorld : public World
 {
@@ -18,6 +18,5 @@ private:
 	Light* m_light2 = nullptr;
 	OBJMesh* m_rabbit = nullptr;
 	Cube* m_cube = nullptr;
-	Quad* m_quad = nullptr;
+	TexturePlane* m_map = nullptr;
 };
-

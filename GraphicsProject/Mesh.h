@@ -22,6 +22,7 @@ public:
 	void onDraw() override;
 
 	virtual Vertex* generateVertices(unsigned int& vertexCount, unsigned int& triCount) = 0;
+	virtual unsigned int* generateIndices(unsigned int& indexCount);
 
 private:
 	unsigned int m_triCount;
