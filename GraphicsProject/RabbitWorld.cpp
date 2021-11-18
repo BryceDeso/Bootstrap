@@ -45,10 +45,11 @@ void RabbitWorld :: onStart()
 	m_cube->getTransform()->setPosition({ 3.0f, 0.0f, 0.0f });
 	add(m_cube);
 
-	//Ininitailizing texture plane
-	m_plane = new TexturePlane("earth_diffuse.jpg", { 0.5f, 0.5f, 0.5f, 1.0f });
-	add(m_plane);
-
+	//Initalizing quad
+	m_quad = new Quad("earth_diffuse.jpg", { 0.5f, 0.5f, 0.5f, 1.0f });
+	m_quad->getTransform()->setPosition(glm::vec3(0.0f, 0.0f, 0.0f));
+	m_quad->getTransform()->setScale(glm::vec3(1.0f, 1.0f, 1.0f));
+	add(m_quad);
 }
 
 void RabbitWorld::onEnd()
@@ -58,4 +59,5 @@ void RabbitWorld::onEnd()
 	destroy(m_light2);
 	destroy(m_rabbit);
 	destroy(m_cube);
+	destroy(m_quad);
 }
