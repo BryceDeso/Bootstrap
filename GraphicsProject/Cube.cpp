@@ -26,28 +26,6 @@ Cube::Vertex* Cube::generateVertices(unsigned int& vertexCount, unsigned int& tr
 	vertices[6].color = { 0.0f, 1.0f, 0.0f, 1.0f };
 	vertices[7].color = { 0.0f, 1.0f, 0.0f, 1.0f };
 
-
-	//initializeCorner(vertices, vertexCount, 0, { 1.0f,  1.0f, 1.0f }); //A
-	//initializeCorner(vertices, vertexCount, 1, { 1.0f,  1.0f, -1.0f }); //B
-	//initializeCorner(vertices, vertexCount, 2, { 1.0f, -1.0f, 1.0f }); //C
-	//initializeCorner(vertices, vertexCount, 3, { 1.0f, -1.0f,  -1.0f }); //D
-	//initializeCorner(vertices, vertexCount, 4, { -1.0f, -1.0f, 1.0f }); //E
-	//initializeCorner(vertices, vertexCount, 5, { -1.0f, -1.0f, -1.0f }); //F
-	//initializeCorner(vertices, vertexCount, 6, { -1.0f, 1.0f, 1.0f }); //G
-	//initializeCorner(vertices, vertexCount, 7, { -1.0f, 1.0f,  -1.0f }); //H
-
-	/*
-	+ + + 
-	+ - +
-	+ + -
-	+ - -
-
-	- - -
-	- + -
-	- - +
-	- + +
-	*/
-
 	return vertices;
 }
 

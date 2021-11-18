@@ -134,6 +134,7 @@ int Engine::draw()
 
 	m_shader->bind();
 
+	//Initialize camera
 	Camera* camera = m_activeWorld->getCamera();
 
 	m_projectionMatrix = glm::perspective(
@@ -142,6 +143,8 @@ int Engine::draw()
 		camera->getNearClip(),
 		camera->getFarClip()
 	);
+
+	//Bind uniforms to shader
 	glm::mat4 projectionViewMatrix = m_projectionMatrix * camera->getTransform()->getGlobalMatrix();
 	m_shader->bindUniform("projectionViewMatrix", projectionViewMatrix);
 	m_shader->bindUniform("cameraPosition", camera->getTransform()->getPosition());

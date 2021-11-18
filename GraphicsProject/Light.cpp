@@ -26,6 +26,7 @@ void Light::onDraw()
 	int lightDiffuse;
 	int lightSpecular;
 
+	//Checks if the light is of type 0 or 1 to determind which shader to use.
 	if (m_lightType == 0)
 	{
 		std::string bound = ("iDirection");

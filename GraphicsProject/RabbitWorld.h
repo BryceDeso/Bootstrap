@@ -3,8 +3,8 @@
 #include "PlayerCamera.h"
 #include "Light.h"
 #include "Cube.h"
-#include "TexturePlane.h"
 #include "OBJMesh.h"
+#include "Quad.h"
 
 class RabbitWorld : public World
 {
@@ -18,5 +18,5 @@ private:
 	Light* m_light2 = nullptr;
 	OBJMesh* m_rabbit = nullptr;
 	Cube* m_cube = nullptr;
-	TexturePlane* m_plane = nullptr;
+	Quad* m_quad = nullptr;
 };
