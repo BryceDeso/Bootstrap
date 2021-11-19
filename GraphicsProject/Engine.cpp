@@ -32,7 +32,8 @@ int Engine::run()
 
 	//Start
 	exitCode = start();
-	if (exitCode) {
+	if (exitCode) 
+	{
 		return exitCode;
 	}
 

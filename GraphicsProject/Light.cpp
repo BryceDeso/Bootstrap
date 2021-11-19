@@ -21,10 +21,10 @@ void Light::onDraw()
 		return;
 	}
 
-	int lightDirection;
-	int lightAmbient;
-	int lightDiffuse;
-	int lightSpecular;
+	int lightDirection = 0;
+	int lightAmbient = 0;
+	int lightDiffuse = 0;
+	int lightSpecular = 0;
 
 	//Checks if the light is of type 0 or 1 to determind which shader to use.
 	if (m_lightType == 0)
