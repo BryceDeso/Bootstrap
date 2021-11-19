@@ -5,7 +5,7 @@
     
 To get the project and use it, go to the releases tab, click on __BootStrapGraphicsAssessment.zip__ to start downloading the project.
 
-You can go to your computers files, and from there go to downloads and right click on __BootStrapGraphicsAssessment.zip__ then click extract all.
+Once downloaded, you can go to your computers files and from there go to downloads and right click on __BootStrapGraphicsAssessment.zip__ then click extract all.
 
 Once that is done, go to where you stored the file, then open __BootStrapGraphicsAssessment__, open __AssessmentBuild__, then double click __GraphicsProject.exe__ to run the program.
 
